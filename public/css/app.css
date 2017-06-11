@@ -318,6 +318,11 @@
   color: #333;
 }
 
+.search-item__distance {
+  margin: -1px 0 3px 0;
+  color: orangered;
+}
+
 .search-item__name {
   margin-bottom: 6px;
 }

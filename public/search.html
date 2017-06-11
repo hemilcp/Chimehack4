@@ -62,10 +62,13 @@
         <img class="search-item__photo-img" src="{{mentor.pic}}">
       </div>
       <div class="col-xs-9">
-        <h4 class="search-item__name">{{mentor.name}}</h4>
+        <h4 class="search-item__name">
+          {{mentor.name}},
+          <small>{{mentor.country}}</small>
+        </h4>
         <p>
           <span class="text-muted">Interested in</span>
-          {{mentor.languages.join(', ')}}
+          {{mentor.interest.join(', ')}}
         </p>
       </div>
       <div class="col-xs-12">
@@ -81,12 +84,12 @@
       </div>
       <div class="col-xs-9">
         <h4 class="search-item__name">{{peer.name}}</h4>
-        <p>
-          <span class="text-muted">Interested in</span>
-          {{peer.languages.join(', ')}}
+        <p class="search-item__distance">
+          {{peer.distance}} miles away
         </p>
         <p>
-          <span class="search-item__distance text-danger">3 miles away</span>
+          <span class="text-muted">Interested in</span>
+          {{peer.interest.join(', ')}}
         </p>
       </div>
       <div class="col-xs-12">
