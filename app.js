@@ -14,6 +14,7 @@ mongoose.connect('mongodb://hemilcp:denny@ds121222.mlab.com:21222/chimehack4');
 // mongodb://<dbuser>:<dbpassword>@ds121222.mlab.com:21222/chimehack4
 console.log("Hello World!");
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {

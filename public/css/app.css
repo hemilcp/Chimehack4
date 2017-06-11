@@ -1,0 +1,337 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+
+/* USER PAGE */
+
+.user-photo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-photo__bg {
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  right: -20px;
+  left: -20px;
+  background-position: 50% 50%;
+  background-size: cover;
+  filter: blur(8px) brightness(0.4) hue-rotate(140deg);
+}
+
+.user-photo__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 18px;
+}
+
+.user-photo__img {
+  border-radius: 100%;
+  max-width: 100%;
+  box-shadow: 0 5px 6px rgba(50,50,93,.21), 0 1px 3px rgba(0,0,0,.08);
+  border: 4px solid rgba(255,255,255,.99);
+}
+
+.user-photo__name,
+.user-photo__location {
+  color: #ffffff;
+  text-shadow: 0 2px rgba(0,0,0,.1);
+}
+
+.user-photo__name {
+  letter-spacing: 0.05em;
+}
+
+.user-photo__location {
+  font-size: 17px;
+}
+
+.user-footer {
+  height: 74px;
+}
+
+.user-footer__button {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.user-rating {
+  padding-top: 20px;
+  transform: translateX(-15px) scale(1.1);
+}
+
+.user-rating__stars {
+  color: #ffc000;
+  padding-left: 0;
+}
+
+.user-bio {
+  font-size: 15px;
+  margin-top: 20px;
+  background: #eee;
+  padding: 20px 0 60px 0;
+  text-align: center;
+}
+
+
+
+
+/* CHAT PAGE */
+
+.chat-messages__list {
+  padding-top: 8px;
+  padding-bottom: 70px;
+}
+
+.chat-messages__item {
+  position: relative;
+}
+
+.chat-messages__inner {
+  background: #e7e7e7;
+  border-radius: 15px;
+  padding: 9px 10px;
+  line-height: 18px;
+  margin: 10px 0 0 32px;
+  font-size: 14px;
+}
+
+.chat-messages__item--own {
+  margin-left: 25%;
+}
+
+.chat-messages__item--own .chat-messages__inner {
+  background: #337AB7;
+  color: #ffffff;
+}
+
+.chat-messages__photo {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin-right: 6px;
+  position: absolute;
+  top: 12px;
+}
+
+.chat-footer {
+  height: 60px;
+  padding-top: 12px;
+}
+
+.chat-footer__actions {
+  padding-left: 0;
+}
+
+.chat-footer__actions-button {
+  width: 100%;
+}
+
+
+
+/* MAIN */
+
+.main-heading {
+  margin: 72px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+}
+
+.main-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.main-tiles__item {
+  width: 50%;
+  height: calc(33.5vh - 36px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0 20px;
+  text-shadow: 0 3px 2px rgba(0,0,0,.12), 0 1px 0 rgba(0,0,0,.05);
+  position: relative;
+}
+
+.main-tiles__bg {
+  background-size: cover;
+  opacity: .1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-tiles__item a {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  transition: all 300ms ease;
+  text-decoration: none;
+}
+
+.main-tiles__item .fa {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.main-tiles__item a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-tiles__item:hover a {
+  transform: scale(1.1);
+}
+
+.main-tiles__item:nth-child(1) {
+  background: #4ACCA0;
+}
+
+.main-tiles__item:nth-child(1) .main-tiles__bg {
+  background-image: url(../img/tiles/learning.jpg);
+  background-position: 30% 0;
+  filter: contrast(120%);
+}
+
+.main-tiles__item:nth-child(2) {
+  background: #5C9EF5;
+}
+
+.main-tiles__item:nth-child(2) .main-tiles__bg {
+  background-image: url(../img/tiles/immigration.jpg);
+}
+
+.main-tiles__item:nth-child(3) {
+  background: coral;
+}
+
+.main-tiles__item:nth-child(3) .main-tiles__bg {
+  background-image: url(../img/tiles/path.jpg);
+  background-position: 54% 0%;
+  filter: contrast(150%) hue-rotate(140deg);
+}
+
+.main-tiles__item:nth-child(4) {
+  background: orchid;
+}
+
+.main-tiles__item:nth-child(4) .main-tiles__bg {
+  background-image: url(../img/tiles/legal.jpg);
+}
+
+.main-tiles__item:nth-child(5) {
+  background: orange;
+}
+
+.main-tiles__item:nth-child(5) .main-tiles__bg {
+  background-image: url(../img/tiles/family.jpg);
+}
+
+.main-tiles__item:nth-child(6) {
+  background: grey;
+}
+
+.main-tiles__item:nth-child(6) .main-tiles__bg {
+  background-image: url(../img/tiles/job.jpg);
+}
+
+
+
+/* SEARCH */
+
+.search-tabs {
+  background: #eee;
+  border-radius: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+  margin: 17px 0 15px 0;
+  font-size: 16px;
+}
+
+.search-tabs__list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.search-tabs__list-item {
+  width: 50%;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.search-tabs__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+  width: 50%;
+  height: 100%;
+  background: #5C9EF5;
+  transition: all 300ms ease;
+}
+
+.search-tabs__list-item:first-child {
+  color: #fff;
+}
+
+.search-tabs--on .search-tabs__list-item:first-child {
+  color: #333;
+}
+
+.search-tabs--on .search-tabs__list-item:last-child {
+  color: #fff;
+}
+
+.search-tabs--on .search-tabs__inner {
+  transform: translateX(101%);
+}
+
+.search-item {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.search-item:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.search-item__name {
+  margin-bottom: 6px;
+}
+
+.search-item__photo {
+  padding-right: 0 !important;
+}
+
+.search-item__photo-img {
+  width: 100%;
+  border-radius: 100%;
+  margin-top: 10px;
+}
+
+.search-item__line {
+  margin: 11px -15px 2px -15px;
+}
