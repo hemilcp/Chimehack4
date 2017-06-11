@@ -5,18 +5,15 @@ angular.module('gt', [])
 
     $scope.messages = [
       {
-        text: 'Highly motivated team-builder and team-player. Passionate about front-end development.',
+        text: 'Hi, my name is Hemil. How are you?',
         user: 'user-2'
       },
       {
-        text: 'team-builder and team-player. Passionate about front-end development.'
+        text: 'Hi Hemil, I\'m Alina. I \'m good. Sorry, my Wnglish not good.'
       },
       {
-        text: 'Passionate about front-end development.',
+        text: 'That\'s fine. I can help you with that. I teach English on weekends.',
         user: 'user-2'
-      },
-      {
-        text: 'Highly motivated team-builder and team-player. Passionate about front-end development.'
       }
     ];
 
