@@ -111,18 +111,40 @@ module.exports = function(app) {
 
         console.log("GET request for : "+req.params.name);
         var name = req.params.name;
-        redisSlaveClient.get(name, function(err,reply){
 
-            if(reply!=null) {
-                user.findOne({ name : req.params.name }, function(error, data){
+        user.findOne({ name : req.params.name }, function(error, data){
                     console.log(data);
                     return res.status(200).json(data);
                 });
-            }
-            else {
-                return res.status(401).json(errorResponse('No data available!', 401));
-            }
-        });
+        // redisSlaveClient.get(name, function(err,reply){
+
+        //     if(reply!=null) {
+        //         user.findOne({ name : req.params.name }, function(error, data){
+        //             console.log(data);
+        //             return res.status(200).json(data);
+        //         });
+        //     }
+        //     else {
+        //         return res.status(401).json(errorResponse('No data available!', 401));
+        //     }
+        // });
+    });
+
+    app.get('/mentors/', function(req, res) {
+
+            var mentor = "true";
+        user.find({ mentor : "true" }, function(error, data){
+                    console.log(data);
+                    return res.status(200).json(data);
+                });
+    });
+
+ app.get('/mentees/', function(req, res) {
+
+        user.find({ mentor : "false" }, function(error, data){
+                    console.log(data);
+                    return res.status(200).json(data);
+                });
     });
 
     app.get('/users/', function(req, res) {
