@@ -1,4 +1,5 @@
-var API_SERVER = 'https://nameless-shore-34478.herokuapp.com';
+//var API_SERVER = 'https://nameless-shore-34478.herokuapp.com';
+var API_SERVER = '';
 
 angular.module('gt', [])
   .controller('Chat', function($scope){
@@ -33,14 +34,14 @@ angular.module('gt', [])
     $scope.isMentors = true;
 
     $http({
-      url: API_SERVER + '/users',
+      url: '/users.json',
       method: 'GET'
     }).then(function successCallback(response){
-        $scope.mentors = response.data.filter(function(item){
-          return item.mentor === 'true';
+        $scope.mentors = response.data.data.filter(function(item){
+          return item.mentor;
         });
-        $scope.peers = response.data.filter(function(item){
-          return item.mentor === 'false';
+        $scope.peers = response.data.data.filter(function(item){
+          return !item.mentor;
         });
     });
 
